@@ -357,7 +357,7 @@ body {
   left: calc(50% - 55px);
   border-radius: 50%;
   transform: translateZ(40px);
-  filter: blur(20px);
+  filter: blur(10px);
   opacity: 0.6;
   animation: 5s shine linear infinite;
 }
