@@ -43,11 +43,11 @@ body {
 }
 
 .container {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  min-height: 820px;
+  min-height: 100%;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -252,6 +252,7 @@ body {
 }
 
 .star-1 {
+  background: url('../../assets/img/img1.jpg') no-repeat;
   transform: translateZ(-2px);
   animation: 10s star-1-rotate linear infinite;
 }
@@ -266,6 +267,7 @@ body {
 }
 
 .star-2 {
+  background: url('../../assets/img/img2.jpg') no-repeat;
   transform: translateZ(-1px);
   animation: 10s star-2-rotate linear infinite;
 }
@@ -284,58 +286,57 @@ body {
   animation: 10s star-3-rotate linear infinite;
 }
 
-@keyframes star-3-rotate {
+/* @keyframes star-3-rotate {
   0% {
     transform: rotateX(0deg) rotateY(0deg) translateZ(0px);
   }
   99.99999% {
     transform: rotateX(0deg) rotateY(359deg) translateZ(0px);
   }
-}
+} */
 
 .star-4 {
   transform: translateZ(1px);
   animation: 10s star-4-rotate linear infinite;
 }
 
-@keyframes star-4-rotate {
+/* @keyframes star-4-rotate {
   0% {
     transform: rotateX(0deg) rotateY(0deg) translateZ(1px);
   }
   99.99999% {
     transform: rotateX(0deg) rotateY(359deg) translateZ(1px);
   }
-}
+} */
 
 .star-5 {
   transform: translateZ(2px);
   animation: 10s star-5-rotate linear infinite;
 }
 
-@keyframes star-5-rotate {
+/* @keyframes star-5-rotate {
   0% {
     transform: rotateX(0deg) rotateY(0deg) translateZ(2px);
   }
   99.99999% {
     transform: rotateX(0deg) rotateY(359deg) translateZ(2px);
   }
-}
+} */
 
-.star,
-.star:before,
-.star:after {
-  content: "";
-  height: 0;
-  width: 0;
-  border-top: solid 30px var(--star-bg);
+.star {
+  height: 80px;
+  width: 80px;
+  /* border-top: solid 30px transparent;
   border-left: solid 45px transparent;
-  border-right: solid 45px transparent;
+  border-right: solid 45px transparent; */
   position: absolute;
-  top: 0;
-  left: calc(50% - 45px);
+  top: -75px;
+  left: calc(50% - 40px);
+  background-size: 80px;
+  background-origin: border-box;
 }
 
-.star:before {
+/* .star:before {
   transform: rotate(72deg);
   top: -33px;
   left: -46px;
@@ -345,15 +346,15 @@ body {
   transform: rotate(287deg);
   top: -33px;
   left: -44px;
-}
+} */
 
 .shine {
-  background: var(--shine-bg);
-  height: 90px;
-  width: 90px;
+  background: #fdcfdf;
+  height: 110px;
+  width: 110px;
   position: absolute;
-  top: -45px;
-  left: calc(50% - 45px);
+  top: -102px;
+  left: calc(50% - 55px);
   border-radius: 50%;
   transform: translateZ(40px);
   filter: blur(20px);
